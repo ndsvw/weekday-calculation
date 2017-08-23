@@ -40,9 +40,6 @@ def getMonatsCode(monat, jahr):
     return monatsCode
 
 def isSchaltjahr(jahr):
-    if (jahr % 400) == 0 or ((jahr % 4) == 0 and (jahr % 100) != 0):
-       return True
-    else:
-       return False
+    return (jahr % 400) == 0 or ((jahr % 4) == 0 and (jahr % 100) != 0)
 
 print(getWochentag(int(sys.argv[1:][0]), int(sys.argv[1:][1]), int(sys.argv[1:][2])))
