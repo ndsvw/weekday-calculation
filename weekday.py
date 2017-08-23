@@ -1,9 +1,11 @@
 import sys
 
+a = ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"]
+
 def getWochentag(tag, monat, jahr):
     if jahr < 1900 || jahr > 2099:
         return "Es können nur Wochentage zwischen 1900 und 2099 berechnet werden."
-    a = ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"]
+    
     sum = tag + getMonatsCode(monat, jahr) + getJahresCode(jahr)
     print("Tag = " + str(tag))
     print("Monat = " + str(getMonatsCode(monat, jahr)))
